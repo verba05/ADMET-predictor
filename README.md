@@ -96,7 +96,7 @@ Identyczna szkieletowa architektura używana jest dla wszystkich trzech reprezen
 
 ---
 
-## Wyniki — NN z połączeniem rezydualnym vs. bez (slajd)
+## Wyniki — NN z połączeniem rezydualnym 
 
 Porównanie tej samej architektury w dwóch wariantach (**+Res** = z połączeniem rezydualnym, **−Res** = bez) na trzech reprezentacjach. Pokazany jest **R²** dla zadań regresji oraz **AUROC** dla klasyfikacji (im wyżej, tym lepiej). Pogrubiona wartość = najlepszy wynik w wierszu.
 

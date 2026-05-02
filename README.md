@@ -22,7 +22,7 @@ Na podstawie analizy literatury postawiliśmy następujące hipotezy:
 3. W przypadku endpointów niepowiązanych pojawi się **transfer negatywny** (MTL pogorszy wyniki względem STL).
 4. **Wybór reprezentacji molekularnej** silnie wpływa na skuteczność predykcji - różnice powinny być większe niż między samymi modelami.
 
-### Podejście — dwie fazy
+### Podejście - dwie fazy
 
 | Faza | Co | Po co |
 |---|---|---|
@@ -65,9 +65,9 @@ Stos technologiczny pogrupowany według warstw, zgodnie ze schematem projektowym
 | Warstwa | Narzędzia |
 |---|---|
 | **Środowisko** | Python 3.12, Jupyter / Google Colab (GPU T4) |
-| **Cheminformatyka** | [**RDKit**](https://www.rdkit.org/) — parsowanie SMILES, Morgan/ECFP fingerprints, deskryptory 2D, walidacja cząsteczek<br>[**PyTDC**](https://tdc.readthedocs.io/) — pobieranie zbiorów ADMET (`tdc.single_pred.ADME` / `Tox`) |
-| **Reprezentacje molekularne** | **ECFP4** — `AllChem.GetMorganFingerprintAsBitVect`, 1024 bity, radius 2<br>**Deskryptory 2D** — 10 cech z RDKit: MW, LogP, HBD, HBA, TPSA, RotatableBonds, AromaticRings, HeavyAtoms, MolMR, FractionCSP3<br>**MoLFormer** - embeddingi z pretrenowanego modelu `ibm/MoLFormer-XL-both-10pct` (HuggingFace Transformers) |
-| **Modelowanie - klasyczne** | [**scikit-learn**](https://scikit-learn.org/) — `RandomForestRegressor` / `RandomForestClassifier`, dobór hiperparametrów przez `RandomizedSearchCV` (n_estimators, max_depth, max_features, min_samples_split) |
+| **Cheminformatyka** | [**RDKit**](https://www.rdkit.org/) - parsowanie SMILES, Morgan/ECFP fingerprints, deskryptory 2D, walidacja cząsteczek<br>[**PyTDC**](https://tdc.readthedocs.io/) — pobieranie zbiorów ADMET (`tdc.single_pred.ADME` / `Tox`) |
+| **Reprezentacje molekularne** | **ECFP4** — `AllChem.GetMorganFingerprintAsBitVect`, 1024 bity, radius 2<br>**Deskryptory 2D** - 10 cech z RDKit: MW, LogP, HBD, HBA, TPSA, RotatableBonds, AromaticRings, HeavyAtoms, MolMR, FractionCSP3<br>**MoLFormer** - embeddingi z pretrenowanego modelu `ibm/MoLFormer-XL-both-10pct` (HuggingFace Transformers) |
+| **Modelowanie - klasyczne** | [**scikit-learn**](https://scikit-learn.org/) - `RandomForestRegressor` / `RandomForestClassifier`, dobór hiperparametrów przez `RandomizedSearchCV` (n_estimators, max_depth, max_features, min_samples_split) |
 | **Modelowanie - sieci neuronowe** | [**PyTorch**](https://pytorch.org/) - własny `AdmetEncoder` (Linear + LayerNorm + ReLU + Dropout, opcjonalny residual) z trzema typami głowic: STL_Regressor, STL_Classifier, MTL_Hybrid (`nn.ModuleDict` na endpoint)<br>Trening: optymalizator Adam (lr 1e-3 / 5e-4), 100 epok, MSELoss / BCEWithLogitsLoss, `StandardScaler` na etykietach regresji |
 | **Modelowanie - embeddingi** | [**HuggingFace Transformers**](https://huggingface.co/docs/transformers) - załadowanie i inferencja MoLFormer |
 | **Analiza danych** | NumPy, Pandas, Matplotlib - manipulacja tabelami, wizualizacja rozkładów endpointów, wykresy diagnostyczne |

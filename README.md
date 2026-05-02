@@ -5,29 +5,29 @@ Autorzy: Jakub Cieniuch, Laura Musioł, Ivan Verbovetskyi.
 
 ## O projekcie
 
-Profil **ADMET** (Absorption, Distribution, Metabolism, Excretion, Toxicity) opisuje pełny cykl życia cząsteczki w organizmie — od wchłonięcia do krwi i dystrybucji do tkanek, przez przemiany metaboliczne w wątrobie, aż po wydalenie i ocenę bezpieczeństwa. Parametry te decydują jednocześnie o **skuteczności terapeutycznej** leku (czy dotrze do celu w odpowiednim stężeniu) i o **bezpieczeństwie pacjenta**. Wykorzystanie metod komputerowych (*in silico*) do predykcji profilu ADMET na wczesnym etapie badań pozwala szybko odsiać ryzykowne kandydaty, dzięki czemu cały proces tworzenia leku staje się tańszy i krótszy.
+Profil **ADMET** (Absorption, Distribution, Metabolism, Excretion, Toxicity) opisuje pełny cykl życia cząsteczki w organizmie - od wchłonięcia do krwi i dystrybucji do tkanek, przez przemiany metaboliczne w wątrobie, aż po wydalenie i ocenę bezpieczeństwa. Parametry te decydują jednocześnie o **skuteczności terapeutycznej** leku (czy dotrze do celu w odpowiednim stężeniu) i o **bezpieczeństwie pacjenta**. Wykorzystanie metod komputerowych (*in silico*) do predykcji profilu ADMET na wczesnym etapie badań pozwala szybko odsiać ryzykowne kandydaty, dzięki czemu cały proces tworzenia leku staje się tańszy i krótszy.
 
-Celem projektu jest **porównanie podejścia jednozadaniowego (STL — Single-Task Learning) z podejściem wielozadaniowym (MTL — Multi-Task Learning)** w predykcji 10 endpointów ADMET pochodzących z benchmarku [TDC (Therapeutics Data Commons)](https://tdc.readthedocs.io/). Każdy endpoint trenowany jest:
+Celem projektu jest **porównanie podejścia jednozadaniowego (STL - Single-Task Learning) z podejściem wielozadaniowym (MTL - Multi-Task Learning)** w predykcji 10 endpointów ADMET pochodzących z benchmarku [TDC (Therapeutics Data Commons)](https://tdc.readthedocs.io/). Każdy endpoint trenowany jest:
 
 - na **trzech reprezentacjach molekularnych**: ECFP4 fingerprinty, 10-cechowe deskryptory 2D oraz pretrenowane embeddingi z modelu **MoLFormer**,
 - przy użyciu **dwóch rodzin modeli**: klasycznego Random Forest oraz sieci neuronowych w PyTorch (z opcjonalnym połączeniem rezydualnym),
-- a w przypadku MTL — w **trzech zestawach tematycznych** (Absorpcja, Eliminacja, Kardiotoksyczność), w których endpointy są pogrupowane według mechanizmów biologicznych.
+- a w przypadku MTL - w **trzech zestawach tematycznych** (Absorpcja, Eliminacja, Kardiotoksyczność), w których endpointy są pogrupowane według mechanizmów biologicznych.
 
 ### Hipotezy badawcze
 
 Na podstawie analizy literatury postawiliśmy następujące hipotezy:
 
-1. Modele MTL osiągają **lepszą średnią jakość predykcji** niż STL — szczególnie dla endpointów z małą liczbą danych treningowych.
+1. Modele MTL osiągają **lepszą średnią jakość predykcji** niż STL - szczególnie dla endpointów z małą liczbą danych treningowych.
 2. **Największa poprawa** wyników wystąpi dla najmocniej powiązanych biologicznie endpointów.
 3. W przypadku endpointów niepowiązanych pojawi się **transfer negatywny** (MTL pogorszy wyniki względem STL).
-4. **Wybór reprezentacji molekularnej** silnie wpływa na skuteczność predykcji — różnice powinny być większe niż między samymi modelami.
+4. **Wybór reprezentacji molekularnej** silnie wpływa na skuteczność predykcji - różnice powinny być większe niż między samymi modelami.
 
 ### Podejście — dwie fazy
 
 | Faza | Co | Po co |
 |---|---|---|
-| **I — Baseline STL** | 2 modele (RF, NN) × 3 reprezentacje × 10 endpointów = 60 scenariuszy | wyznaczenie wartości referencyjnej dla każdego endpointu |
-| **II — Eksperymenty MTL** | łączenie endpointów w 3 zestawy tematyczne, te same splity train/test co w STL | sprawdzenie, w których konfiguracjach MTL pomaga, a w których szkodzi |
+| **I - Baseline STL** | 2 modele (RF, NN) × 3 reprezentacje × 10 endpointów = 60 scenariuszy | wyznaczenie wartości referencyjnej dla każdego endpointu |
+| **II - Eksperymenty MTL** | łączenie endpointów w 3 zestawy tematyczne, te same splity train/test co w STL | sprawdzenie, w których konfiguracjach MTL pomaga, a w których szkodzi |
 
 ## Endpointy
 
@@ -66,13 +66,13 @@ Stos technologiczny pogrupowany według warstw, zgodnie ze schematem projektowym
 |---|---|
 | **Środowisko** | Python 3.12, Jupyter / Google Colab (GPU T4) |
 | **Cheminformatyka** | [**RDKit**](https://www.rdkit.org/) — parsowanie SMILES, Morgan/ECFP fingerprints, deskryptory 2D, walidacja cząsteczek<br>[**PyTDC**](https://tdc.readthedocs.io/) — pobieranie zbiorów ADMET (`tdc.single_pred.ADME` / `Tox`) |
-| **Reprezentacje molekularne** | **ECFP4** — `AllChem.GetMorganFingerprintAsBitVect`, 1024 bity, radius 2<br>**Deskryptory 2D** — 10 cech z RDKit: MW, LogP, HBD, HBA, TPSA, RotatableBonds, AromaticRings, HeavyAtoms, MolMR, FractionCSP3<br>**MoLFormer** — embeddingi z pretrenowanego modelu `ibm/MoLFormer-XL-both-10pct` (HuggingFace Transformers) |
-| **Modelowanie — klasyczne** | [**scikit-learn**](https://scikit-learn.org/) — `RandomForestRegressor` / `RandomForestClassifier`, dobór hiperparametrów przez `RandomizedSearchCV` (n_estimators, max_depth, max_features, min_samples_split) |
-| **Modelowanie — sieci neuronowe** | [**PyTorch**](https://pytorch.org/) — własny `AdmetEncoder` (Linear + LayerNorm + ReLU + Dropout, opcjonalny residual) z trzema typami głowic: STL_Regressor, STL_Classifier, MTL_Hybrid (`nn.ModuleDict` na endpoint)<br>Trening: optymalizator Adam (lr 1e-3 / 5e-4), 100 epok, MSELoss / BCEWithLogitsLoss, `StandardScaler` na etykietach regresji |
-| **Modelowanie — embeddingi** | [**HuggingFace Transformers**](https://huggingface.co/docs/transformers) — załadowanie i inferencja MoLFormer |
-| **Analiza danych** | NumPy, Pandas, Matplotlib — manipulacja tabelami, wizualizacja rozkładów endpointów, wykresy diagnostyczne |
-| **Serializacja** | `pickle` — zapis splitów train/test do plików `.pkl`, gwarantuje **identyczne** podziały danych dla wszystkich modeli i porównywalność wyników |
-| **Metryki** | scikit-learn — `mean_squared_error`, `mean_absolute_error`, `r2_score`, `accuracy_score`, `f1_score`, `roc_auc_score` |
+| **Reprezentacje molekularne** | **ECFP4** — `AllChem.GetMorganFingerprintAsBitVect`, 1024 bity, radius 2<br>**Deskryptory 2D** — 10 cech z RDKit: MW, LogP, HBD, HBA, TPSA, RotatableBonds, AromaticRings, HeavyAtoms, MolMR, FractionCSP3<br>**MoLFormer** - embeddingi z pretrenowanego modelu `ibm/MoLFormer-XL-both-10pct` (HuggingFace Transformers) |
+| **Modelowanie - klasyczne** | [**scikit-learn**](https://scikit-learn.org/) — `RandomForestRegressor` / `RandomForestClassifier`, dobór hiperparametrów przez `RandomizedSearchCV` (n_estimators, max_depth, max_features, min_samples_split) |
+| **Modelowanie - sieci neuronowe** | [**PyTorch**](https://pytorch.org/) - własny `AdmetEncoder` (Linear + LayerNorm + ReLU + Dropout, opcjonalny residual) z trzema typami głowic: STL_Regressor, STL_Classifier, MTL_Hybrid (`nn.ModuleDict` na endpoint)<br>Trening: optymalizator Adam (lr 1e-3 / 5e-4), 100 epok, MSELoss / BCEWithLogitsLoss, `StandardScaler` na etykietach regresji |
+| **Modelowanie - embeddingi** | [**HuggingFace Transformers**](https://huggingface.co/docs/transformers) - załadowanie i inferencja MoLFormer |
+| **Analiza danych** | NumPy, Pandas, Matplotlib - manipulacja tabelami, wizualizacja rozkładów endpointów, wykresy diagnostyczne |
+| **Serializacja** | `pickle` - zapis splitów train/test do plików `.pkl`, gwarantuje **identyczne** podziały danych dla wszystkich modeli i porównywalność wyników |
+| **Metryki** | scikit-learn - `mean_squared_error`, `mean_absolute_error`, `r2_score`, `accuracy_score`, `f1_score`, `roc_auc_score` |
 
 ## Architektura sieci neuronowej
 
@@ -122,11 +122,11 @@ Wszystkie modele neuronowe (STL i MTL) dzielą **wspólny szkielet**: enkoder, k
 |---|---|---|---|
 | **STL_Regressor** | `Linear(512, 1)` | wynik liniowy | jeden endpoint regresyjny (np. Caco-2) |
 | **STL_Classifier** | `Linear(512, 1)` + sigmoid w eval | prawdopodobieństwo | jeden endpoint klasyfikacyjny (np. HIA) |
-| **MTL_Hybrid** | `nn.ModuleDict` — osobna `Linear(512, 1)` per endpoint, oznaczona nazwą zadania | słownik `{task: pred}` | wiele endpointów naraz |
+| **MTL_Hybrid** | `nn.ModuleDict` - osobna `Linear(512, 1)` per endpoint, oznaczona nazwą zadania | słownik `{task: pred}` | wiele endpointów naraz |
 
-### Połączenie rezydualne — co testujemy
+### Połączenie rezydualne - co testujemy
 
-Encoder ma **dwa równoważne przepływy** — porównujemy je jako osobne warianty:
+Encoder ma **dwa równoważne przepływy** - porównujemy je jako osobne warianty:
 
 ```python
 # wariant +Res (z residualem):
@@ -140,12 +140,12 @@ Hipoteza: residual stabilizuje gradient i pomaga przy małych zbiorach (mniejsze
 
 ### Strategia treningu MTL z nieprzecinającymi się zbiorami
 
-Endpointy ADMET często **nie pokrywają się cząsteczkowo** — ten sam SMILES rzadko występuje we wszystkich pickle'ach naraz. Stosujemy:
+Endpointy ADMET często **nie pokrywają się cząsteczkowo** - ten sam SMILES rzadko występuje we wszystkich pickle'ach naraz. Stosujemy:
 
 1. **Outer join** wszystkich SMILES z wybranych endpointów → jedna macierz `X` (po jednym wierszu na unikalną cząsteczkę).
-2. **Słownik etykiet** `y_dict` — dla każdego task'a wektor długości `len(X)` z `NaN` tam, gdzie cząsteczki nie ma w danym endpoincie.
-3. **Loss z reduction='none' + maska NaN** — gradient propaguje się tylko przez głowice tych zadań, dla których dana cząsteczka ma etykietę. Wspólny encoder jest aktualizowany przez **wszystkie** dostępne pary (cząsteczka, endpoint).
-4. **Test set NIE jest outer-joinowany** — każdy endpoint ewaluujemy osobno na jego pełnym `test_split`, dla porównywalności z STL.
+2. **Słownik etykiet** `y_dict` - dla każdego task'a wektor długości `len(X)` z `NaN` tam, gdzie cząsteczki nie ma w danym endpoincie.
+3. **Loss z reduction='none' + maska NaN** - gradient propaguje się tylko przez głowice tych zadań, dla których dana cząsteczka ma etykietę. Wspólny encoder jest aktualizowany przez **wszystkie** dostępne pary (cząsteczka, endpoint).
+4. **Test set NIE jest outer-joinowany** - każdy endpoint ewaluujemy osobno na jego pełnym `test_split`, dla porównywalności z STL.
 
 ## Struktura repo
 
@@ -190,17 +190,17 @@ ADMET-predictor/
 
 ## Jak uruchomić
 
-1. **Środowisko** — notebooki przygotowane pod Google Colab (mount Google Drive, `accelerator: GPU T4`). Lokalnie wymagają:
+1. **Środowisko** - notebooki przygotowane pod Google Colab (mount Google Drive, `accelerator: GPU T4`). Lokalnie wymagają:
    ```bash
    pip install torch rdkit pandas numpy scikit-learn pytdc fuzzywuzzy transformers
    ```
-2. **Splity** — pliki `data_splits/*.pkl` należy umieścić w folderze wskazanym przez zmienną `data_folder` (w Colabie: `/content/drive/MyDrive/mldd_data/`). Gwarantuje to identyczny podział train/test dla każdego modelu i porównywalność wyników.
-3. **Embeddingi MoLFormer** — wymagają wcześniejszego wygenerowania pliku `{endpoint}_MoLFormer_embeddings.csv` (kolumny `Drug`, `Y`, `emb_0…emb_N`). Pipeline generujący znajduje się w katalogu roboczym (`STL_ML/embeddings_molformer.ipynb`).
-4. **Uruchomienie** — każdy notebook iteruje po endpointach i dopisuje metryki do odpowiedniego pliku `metrics_*.txt`.
+2. **Splity** - pliki `data_splits/*.pkl` należy umieścić w folderze wskazanym przez zmienną `data_folder` (w Colabie: `/content/drive/MyDrive/mldd_data/`). Gwarantuje to identyczny podział train/test dla każdego modelu i porównywalność wyników.
+3. **Embeddingi MoLFormer** - wymagają wcześniejszego wygenerowania pliku `{endpoint}_MoLFormer_embeddings.csv` (kolumny `Drug`, `Y`, `emb_0…emb_N`). Pipeline generujący znajduje się w katalogu roboczym (`STL_ML/embeddings_molformer.ipynb`).
+4. **Uruchomienie** - każdy notebook iteruje po endpointach i dopisuje metryki do odpowiedniego pliku `metrics_*.txt`.
 
 ---
 
-## Wyniki — NN z połączeniem rezydualnym vs. bez (slajd)
+## Wyniki - NN z połączeniem rezydualnym vs. bez (slajd)
 
 Porównanie tej samej architektury w dwóch wariantach (**+Res** = z połączeniem rezydualnym, **−Res** = bez) na trzech reprezentacjach. Pokazany jest **R²** dla zadań regresji oraz **AUROC** dla klasyfikacji (im wyżej, tym lepiej). Pogrubiona wartość = najlepszy wynik w wierszu.
 
@@ -219,7 +219,7 @@ Porównanie tej samej architektury w dwóch wariantach (**+Res** = z połączeni
 
 ### Wnioski
 
-- **Embeddingi MoLFormer** wygrywają w **8/10** endpointów — pretrenowana reprezentacja transferuje wiedzę chemiczną, której proste FP/deskryptory nie zawierają.
-- **Połączenie rezydualne** *nie* poprawia wyników w sposób systematyczny — przy pełnych, gęstych reprezentacjach (embeddingi) wariant **bez** residual jest często lekko lepszy (6/10 endpointów). Przy małych zbiorach regresji (VDss, Half_Life) wariant z residual stabilizuje trening i zapobiega katastrofalnemu spadkowi R² do wartości ujemnych.
-- Ujemne R² na **VDss_Lombardo** dla większości wariantów wskazuje, że model przewiduje gorzej niż średnia — endpoint wymaga osobnego potraktowania (mały zbiór, duża wariancja).
+- **Embeddingi MoLFormer** wygrywają w **8/10** endpointów - pretrenowana reprezentacja transferuje wiedzę chemiczną, której proste FP/deskryptory nie zawierają.
+- **Połączenie rezydualne** *nie* poprawia wyników w sposób systematyczny - przy pełnych, gęstych reprezentacjach (embeddingi) wariant **bez** residual jest często lekko lepszy (6/10 endpointów). Przy małych zbiorach regresji (VDss, Half_Life) wariant z residual stabilizuje trening i zapobiega katastrofalnemu spadkowi R² do wartości ujemnych.
+- Ujemne R² na **VDss_Lombardo** dla większości wariantów wskazuje, że model przewiduje gorzej niż średnia - endpoint wymaga osobnego potraktowania (mały zbiór, duża wariancja).
 - **Fingerprinty ECFP4** pozostają konkurencyjne dla zadań klasyfikacji wymagających wzorców podstrukturalnych (AMES, CYP3A4).

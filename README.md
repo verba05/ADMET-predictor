@@ -52,9 +52,9 @@ Lista 10 endpointów dobranych tak, aby reprezentowały zróżnicowane zadania (
 
 | Zestaw | Endpointy powiązane | Endpoint kontrolny (niepowiązany) |
 |---|---|---|
-| **1 — Absorpcja** | Caco-2, HIA, Solubility, Lipophilicity | AMES |
-| **2 — Eliminacja** | Half Life, Clearance Hepatocyte, CYP3A4 Inhibition, VDss | AMES |
-| **3 — Kardiotoksyczność** | hERG, Lipophilicity, Solubility, VDss | AMES |
+| **1 - Absorpcja** | Caco-2, HIA, Solubility, Lipophilicity | AMES |
+| **2 - Eliminacja** | Half Life, Clearance Hepatocyte, CYP3A4 Inhibition, VDss | AMES |
+| **3 - Kardiotoksyczność** | hERG, Lipophilicity, Solubility, VDss | AMES |
 
 W każdym zestawie świadomie dodaliśmy **AMES** jako endpoint biologicznie niepowiązany — pozwala to bezpośrednio zmierzyć transfer negatywny.
 
@@ -66,7 +66,7 @@ Stos technologiczny pogrupowany według warstw, zgodnie ze schematem projektowym
 |---|---|
 | **Środowisko** | Python 3.12, Jupyter / Google Colab (GPU T4) |
 | **Cheminformatyka** | [**RDKit**](https://www.rdkit.org/) - parsowanie SMILES, Morgan/ECFP fingerprints, deskryptory 2D, walidacja cząsteczek<br>[**PyTDC**](https://tdc.readthedocs.io/) — pobieranie zbiorów ADMET (`tdc.single_pred.ADME` / `Tox`) |
-| **Reprezentacje molekularne** | **ECFP4** — `AllChem.GetMorganFingerprintAsBitVect`, 1024 bity, radius 2<br>**Deskryptory 2D** - 10 cech z RDKit: MW, LogP, HBD, HBA, TPSA, RotatableBonds, AromaticRings, HeavyAtoms, MolMR, FractionCSP3<br>**MoLFormer** - embeddingi z pretrenowanego modelu `ibm/MoLFormer-XL-both-10pct` (HuggingFace Transformers) |
+| **Reprezentacje molekularne** | **ECFP4** - `AllChem.GetMorganFingerprintAsBitVect`, 1024 bity, radius 2<br>**Deskryptory 2D** - 10 cech z RDKit: MW, LogP, HBD, HBA, TPSA, RotatableBonds, AromaticRings, HeavyAtoms, MolMR, FractionCSP3<br>**MoLFormer** - embeddingi z pretrenowanego modelu `ibm/MoLFormer-XL-both-10pct` (HuggingFace Transformers) |
 | **Modelowanie - klasyczne** | [**scikit-learn**](https://scikit-learn.org/) - `RandomForestRegressor` / `RandomForestClassifier`, dobór hiperparametrów przez `RandomizedSearchCV` (n_estimators, max_depth, max_features, min_samples_split) |
 | **Modelowanie - sieci neuronowe** | [**PyTorch**](https://pytorch.org/) - własny `AdmetEncoder` (Linear + LayerNorm + ReLU + Dropout, opcjonalny residual) z trzema typami głowic: STL_Regressor, STL_Classifier, MTL_Hybrid (`nn.ModuleDict` na endpoint)<br>Trening: optymalizator Adam (lr 1e-3 / 5e-4), 100 epok, MSELoss / BCEWithLogitsLoss, `StandardScaler` na etykietach regresji |
 | **Modelowanie - embeddingi** | [**HuggingFace Transformers**](https://huggingface.co/docs/transformers) - załadowanie i inferencja MoLFormer |

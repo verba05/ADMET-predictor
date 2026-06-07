@@ -1,0 +1,207 @@
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : Caco2 + Lipophilicity
+========================================
+  RMSE     : 0.5702
+  MAE      : 0.4430
+  R²       : 0.4882
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : Caco2 + Lipophilicity
+========================================
+  RMSE     : 0.9004
+  MAE      : 0.6912
+  R²       : 0.4513
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : Caco-2 (Wang) + Lipophilicity (Astra Zeneca) + Solubility (AqSolDB)
+========================================
+  RMSE     : 0.6002
+  MAE      : 0.4592
+  R²       : 0.4330
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : Caco-2 (Wang) + Lipophilicity (Astra Zeneca) + Solubility (AqSolDB)
+========================================
+  RMSE     : 0.9364
+  MAE      : 0.7265
+  R²       : 0.4065
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : Caco-2 (Wang) + Lipophilicity (Astra Zeneca) + Solubility (AqSolDB)
+========================================
+  RMSE     : 1.4835
+  MAE      : 1.1358
+  R²       : 0.5944
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : Caco-2 (Wang) + Lipophilicity (Astra Zeneca) + Solubility (AqSolDB) + HIA (Hou)
+========================================
+  RMSE     : 0.5988
+  MAE      : 0.4579
+  R²       : 0.4356
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : Caco-2 (Wang) + Lipophilicity (Astra Zeneca) + Solubility (AqSolDB) + HIA (Hou)
+========================================
+  RMSE     : 0.9361
+  MAE      : 0.7278
+  R²       : 0.4069
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : Caco-2 (Wang) + Lipophilicity (Astra Zeneca) + Solubility (AqSolDB) + HIA (Hou)
+========================================
+  RMSE     : 1.4865
+  MAE      : 1.1385
+  R²       : 0.5928
+========================================
+
+========================================
+Endpoint    : HIA_Hou
+Tasks       : Caco-2 (Wang) + Lipophilicity (Astra Zeneca) + Solubility (AqSolDB) + HIA (Hou)
+========================================
+  Accuracy : 0.8707
+  F1       : 0.9282
+  AUROC    : 0.8812
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : Caco2 + HIA
+========================================
+  RMSE     : 0.5159
+  MAE      : 0.3989
+  R²       : 0.5811
+========================================
+
+========================================
+Endpoint    : HIA_Hou
+Tasks       : Caco2 + HIA
+========================================
+  Accuracy : 0.8793
+  F1       : 0.9327
+  AUROC    : 0.9164
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : Lipophilicity (Astra Zeneca) + Solubility (AqSolDB)
+========================================
+  RMSE     : 0.9388
+  MAE      : 0.7298
+  R²       : 0.4034
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : Lipophilicity (Astra Zeneca) + Solubility (AqSolDB)
+========================================
+  RMSE     : 1.4842
+  MAE      : 1.1379
+  R²       : 0.5941
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : Caco2 + AMES
+========================================
+  RMSE     : 0.5339
+  MAE      : 0.4056
+  R²       : 0.5512
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : Caco2 + AMES
+========================================
+  Accuracy : 0.8198
+  F1       : 0.8307
+  AUROC    : 0.9024
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : Caco-2 (Wang)+ Lipophilicity (Astra Zeneca) + AMES Mutagenicity
+========================================
+  RMSE     : 0.5566
+  MAE      : 0.4237
+  R²       : 0.5124
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : Caco-2 (Wang)+ Lipophilicity (Astra Zeneca) + AMES Mutagenicity
+========================================
+  RMSE     : 0.8990
+  MAE      : 0.6890
+  R²       : 0.4529
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : Caco-2 (Wang)+ Lipophilicity (Astra Zeneca) + AMES Mutagenicity
+========================================
+  Accuracy : 0.8102
+  F1       : 0.8212
+  AUROC    : 0.8888
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : Caco-2 (Wang) + Lipophilicity (Astra Zeneca) + Solubility (AqSolDB) + HIA (Hou) + AMES
+========================================
+  RMSE     : 0.5949
+  MAE      : 0.4538
+  R²       : 0.4428
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : Caco-2 (Wang) + Lipophilicity (Astra Zeneca) + Solubility (AqSolDB) + HIA (Hou) + AMES
+========================================
+  RMSE     : 0.9411
+  MAE      : 0.7337
+  R²       : 0.4006
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : Caco-2 (Wang) + Lipophilicity (Astra Zeneca) + Solubility (AqSolDB) + HIA (Hou) + AMES
+========================================
+  RMSE     : 1.5005
+  MAE      : 1.1482
+  R²       : 0.5851
+========================================
+
+========================================
+Endpoint    : HIA_Hou
+Tasks       : Caco-2 (Wang) + Lipophilicity (Astra Zeneca) + Solubility (AqSolDB) + HIA (Hou) + AMES
+========================================
+  Accuracy : 0.8707
+  F1       : 0.9282
+  AUROC    : 0.8855
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : Caco-2 (Wang) + Lipophilicity (Astra Zeneca) + Solubility (AqSolDB) + HIA (Hou) + AMES
+========================================
+  Accuracy : 0.7641
+  F1       : 0.7603
+  AUROC    : 0.8682
+========================================

@@ -1,0 +1,180 @@
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca)
+========================================
+  RMSE     : 111.6777
+  MAE      : 27.8583
+  R²       : 0.1305
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca)
+========================================
+  RMSE     : 49.1557
+  MAE      : 35.8531
+  R²       : 0.0499
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition
+========================================
+  RMSE     : 106.8522
+  MAE      : 26.4415
+  R²       : 0.2040
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition
+========================================
+  RMSE     : 49.8097
+  MAE      : 36.6418
+  R²       : 0.0244
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition
+========================================
+  Accuracy : 0.7510
+  F1       : 0.6981
+  AUROC    : 0.8273
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith) + VDss (Lombardo)
+========================================
+  RMSE     : 104.9254
+  MAE      : 25.6548
+  R²       : 0.2325
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith) + VDss (Lombardo)
+========================================
+  RMSE     : 49.8197
+  MAE      : 36.5718
+  R²       : 0.0240
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith) + VDss (Lombardo)
+========================================
+  RMSE     : 6.5870
+  MAE      : 3.8174
+  R²       : 0.0738
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith) + VDss (Lombardo)
+========================================
+  Accuracy : 0.7506
+  F1       : 0.6981
+  AUROC    : 0.8277
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith)
+========================================
+  RMSE     : 49.7035
+  MAE      : 36.3343
+  R²       : 0.0286
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith)
+========================================
+  Accuracy : 0.7490
+  F1       : 0.6949
+  AUROC    : 0.8304
+========================================
+
+========================================
+Endpoint    : Half_life_Obach
+Tasks       : Half Life (Obach) + CYP3A4 Inhibition (Veith)
+========================================
+  RMSE     : 105.0412
+  MAE      : 25.9899
+  R²       : 0.2308
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : Half Life (Obach) + CYP3A4 Inhibition (Veith)
+========================================
+  Accuracy : 0.7376
+  F1       : 0.6845
+  AUROC    : 0.8189
+========================================
+
+========================================
+Endpoint    : Half_life_Obach
+Tasks       : Half life + AMES
+========================================
+  RMSE     : 109.0799
+  MAE      : 27.1180
+  R²       : 0.1705
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : Half life + AMES
+========================================
+  Accuracy : 0.7854
+  F1       : 0.8072
+  AUROC    : 0.8668
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  RMSE     : 107.1315
+  MAE      : 26.4194
+  R²       : 0.1999
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  RMSE     : 49.9772
+  MAE      : 36.6946
+  R²       : 0.0179
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  RMSE     : 7.8516
+  MAE      : 4.0616
+  R²       : -0.3160
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  Accuracy : 0.7518
+  F1       : 0.6967
+  AUROC    : 0.8293
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  Accuracy : 0.7834
+  F1       : 0.8032
+  AUROC    : 0.8649
+========================================

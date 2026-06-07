@@ -1,0 +1,198 @@
+
+========================================
+Endpoint    : Lipophilicity_AstraZeneca
+Tasks       : herg + Lipophilicity
+========================================
+  RMSE     : 0.8587
+  MAE      : 0.6433
+  R²       : 0.5010
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : herg + Lipophilicity
+========================================
+  Accuracy : 0.8473
+  F1       : 0.9029
+  AUROC    : 0.8217
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AstraZeneca
+Tasks       : herg + Lipophilicity + Solubility
+========================================
+  RMSE     : 0.8683
+  MAE      : 0.6523
+  R²       : 0.4897
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : herg + Lipophilicity + Solubility
+========================================
+  RMSE     : 1.1102
+  MAE      : 0.7576
+  R²       : 0.7729
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : herg + Lipophilicity + Solubility
+========================================
+  Accuracy : 0.8397
+  F1       : 0.8976
+  AUROC    : 0.8292
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AstraZeneca
+Tasks       : herg + Lipophilicity + Solubility + VDss
+========================================
+  RMSE     : 0.8680
+  MAE      : 0.6576
+  R²       : 0.4901
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : herg + Lipophilicity + Solubility + VDss
+========================================
+  RMSE     : 1.1216
+  MAE      : 0.7673
+  R²       : 0.7682
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : herg + Lipophilicity + Solubility + VDss
+========================================
+  RMSE     : 5.6664
+  MAE      : 3.3597
+  R²       : 0.3146
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : herg + Lipophilicity + Solubility + VDss
+========================================
+  Accuracy : 0.8397
+  F1       : 0.8976
+  AUROC    : 0.8397
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : hERG + VDss
+========================================
+  RMSE     : 5.6447
+  MAE      : 3.2774
+  R²       : 0.3198
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : hERG + VDss
+========================================
+  Accuracy : 0.8244
+  F1       : 0.8878
+  AUROC    : 0.8242
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : hERG + Solubility
+========================================
+  RMSE     : 1.1088
+  MAE      : 0.7540
+  R²       : 0.7735
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : hERG + Solubility
+========================================
+  Accuracy : 0.8321
+  F1       : 0.8922
+  AUROC    : 0.8227
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : Solubility + VDss
+========================================
+  RMSE     : 1.1132
+  MAE      : 0.7632
+  R²       : 0.7717
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : Solubility + VDss
+========================================
+  RMSE     : 5.6158
+  MAE      : 3.3862
+  R²       : 0.3268
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : hERG + AMES
+========================================
+  Accuracy : 0.8473
+  F1       : 0.9029
+  AUROC    : 0.8159
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : hERG + AMES
+========================================
+  Accuracy : 0.7923
+  F1       : 0.8108
+  AUROC    : 0.8740
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AstraZeneca
+Tasks       : hERG (Wang) + Lipophilicity (AstraZeneca) + Solubility (AqSolDB) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  RMSE     : 0.8707
+  MAE      : 0.6596
+  R²       : 0.4868
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : hERG (Wang) + Lipophilicity (AstraZeneca) + Solubility (AqSolDB) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  RMSE     : 1.1224
+  MAE      : 0.7650
+  R²       : 0.7678
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : hERG (Wang) + Lipophilicity (AstraZeneca) + Solubility (AqSolDB) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  RMSE     : 5.6500
+  MAE      : 3.3237
+  R²       : 0.3185
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : hERG (Wang) + Lipophilicity (AstraZeneca) + Solubility (AqSolDB) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  Accuracy : 0.8626
+  F1       : 0.9118
+  AUROC    : 0.8415
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : hERG (Wang) + Lipophilicity (AstraZeneca) + Solubility (AqSolDB) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  Accuracy : 0.7730
+  F1       : 0.7945
+  AUROC    : 0.8641
+========================================

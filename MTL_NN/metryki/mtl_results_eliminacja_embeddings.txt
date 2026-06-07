@@ -1,0 +1,600 @@
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 97.3274
+  MAE      : 27.8212
+  R²       : 0.3396
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 52.4173
+  MAE      : 36.3024
+  R²       : -0.0804
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 94.0273
+  MAE      : 28.6781
+  R²       : 0.3836
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 48.1317
+  MAE      : 34.4746
+  R²       : 0.0891
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 94.7431
+  MAE      : 26.3215
+  R²       : 0.3742
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 51.8529
+  MAE      : 36.5113
+  R²       : -0.0572
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 96.7065
+  MAE      : 29.6795
+  R²       : 0.3480
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 51.6359
+  MAE      : 35.5634
+  R²       : -0.0484
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.7766
+  F1       : 0.7235
+  AUROC    : 0.8571
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 91.7328
+  MAE      : 28.3906
+  R²       : 0.4134
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 49.0851
+  MAE      : 35.6571
+  R²       : 0.0526
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.7745
+  F1       : 0.7206
+  AUROC    : 0.8542
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 96.7057
+  MAE      : 29.9747
+  R²       : 0.3480
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 52.7434
+  MAE      : 37.1986
+  R²       : -0.0939
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.7855
+  F1       : 0.7302
+  AUROC    : 0.8691
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 72.9140
+  MAE      : 23.2838
+  R²       : 0.6294
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 52.1126
+  MAE      : 36.6472
+  R²       : -0.0679
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 13.8839
+  MAE      : 5.1232
+  R²       : -3.1149
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.7798
+  F1       : 0.7217
+  AUROC    : 0.8593
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 83.8100
+  MAE      : 25.5526
+  R²       : 0.5103
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 51.5634
+  MAE      : 36.0006
+  R²       : -0.0455
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 10.5678
+  MAE      : 4.0344
+  R²       : -1.3840
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.7794
+  F1       : 0.7233
+  AUROC    : 0.8569
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 83.0353
+  MAE      : 26.2231
+  R²       : 0.5193
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 50.5452
+  MAE      : 35.2066
+  R²       : -0.0046
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 10.8795
+  MAE      : 4.8972
+  R²       : -1.5267
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.7843
+  F1       : 0.7294
+  AUROC    : 0.8598
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 52.0335
+  MAE      : 36.2024
+  R²       : -0.0646
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.7806
+  F1       : 0.7224
+  AUROC    : 0.8609
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 52.9610
+  MAE      : 37.5254
+  R²       : -0.1029
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.7871
+  F1       : 0.7334
+  AUROC    : 0.8709
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 51.0283
+  MAE      : 36.8175
+  R²       : -0.0239
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Clearance_Hepatocyte_AZ', 'CYP3A4_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.7875
+  F1       : 0.7351
+  AUROC    : 0.8687
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'CYP3A4_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 95.8380
+  MAE      : 27.7959
+  R²       : 0.3597
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Half_Life_Obach', 'CYP3A4_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.7806
+  F1       : 0.7198
+  AUROC    : 0.8594
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'CYP3A4_Veith']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 93.4694
+  MAE      : 26.0644
+  R²       : 0.3909
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Half_Life_Obach', 'CYP3A4_Veith']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.7778
+  F1       : 0.7224
+  AUROC    : 0.8561
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'CYP3A4_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 94.5895
+  MAE      : 27.0104
+  R²       : 0.3763
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Half_Life_Obach', 'CYP3A4_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.7871
+  F1       : 0.7295
+  AUROC    : 0.8645
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 99.6757
+  MAE      : 26.6083
+  R²       : 0.3074
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Half_Life_Obach', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.7868
+  F1       : 0.8117
+  AUROC    : 0.8552
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 92.8139
+  MAE      : 25.3942
+  R²       : 0.3995
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Half_Life_Obach', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.7944
+  F1       : 0.8135
+  AUROC    : 0.8634
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 92.9306
+  MAE      : 27.7150
+  R²       : 0.3979
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Half_Life_Obach', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.7868
+  F1       : 0.8020
+  AUROC    : 0.8570
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 87.2896
+  MAE      : 30.0473
+  R²       : 0.4688
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 49.6949
+  MAE      : 35.3320
+  R²       : 0.0289
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 10.2020
+  MAE      : 4.6399
+  R²       : -1.2218
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.7701
+  F1       : 0.7091
+  AUROC    : 0.8492
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.7765
+  F1       : 0.7975
+  AUROC    : 0.8519
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 81.6336
+  MAE      : 24.5038
+  R²       : 0.5354
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 53.1616
+  MAE      : 37.4203
+  R²       : -0.1113
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 12.0796
+  MAE      : 4.4257
+  R²       : -2.1149
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.7668
+  F1       : 0.7115
+  AUROC    : 0.8524
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.7834
+  F1       : 0.8030
+  AUROC    : 0.8549
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 75.0478
+  MAE      : 25.8359
+  R²       : 0.6074
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 51.9960
+  MAE      : 36.7744
+  R²       : -0.0631
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 11.2806
+  MAE      : 5.9259
+  R²       : -1.7165
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.7875
+  F1       : 0.7296
+  AUROC    : 0.8689
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Half_Life_Obach', 'Clearance_Hepatocyte_AZ', 'VDss_Lombardo', 'CYP3A4_Veith', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.8040
+  F1       : 0.8211
+  AUROC    : 0.8674
+========================================

@@ -1,5 +1,9 @@
 # ADMET-predictor
 
+> ⚠️ **Repozytorium w trakcie finalizacji (stan na 07.06.2026).** Porządkujemy jeszcze
+> notebooki i uzupełniamy dokumentację wyników przed prezentacją semestralną. Prosimy
+> prowadzących o wstrzymanie się z oceną do finalnego commita — dziękujemy!
+
 Projekt realizowany w ramach kursu **„Uczenie maszynowe w projektowaniu leków" 2025/2026**.
 Autorzy: Jakub Cieniuch, Laura Musioł, Ivan Verbovetskyi.
 
@@ -21,6 +25,13 @@ Na podstawie analizy literatury postawiliśmy następujące hipotezy:
 2. **Największa poprawa** wyników wystąpi dla najmocniej powiązanych biologicznie endpointów.
 3. W przypadku endpointów niepowiązanych pojawi się **transfer negatywny** (MTL pogorszy wyniki względem STL).
 4. **Wybór reprezentacji molekularnej** silnie wpływa na skuteczność predykcji - różnice powinny być większe niż między samymi modelami.
+
+**Hipotezy dodatkowe (własne):**
+
+5. **Funkcja ważenia straty** w MTL (sieci neuronowe) wpływa na jakość predykcji - adaptacyjne ważenie niepewnością (*Uncertainty Weighting*, Kendall et al.) powinno radzić sobie lepiej niż prosta suma strat czy uśrednianie, bo zapobiega zdominowaniu gradientu przez zadania o dużej skali błędu.
+6. **Wybór rodziny modelu** (Random Forest vs sieć neuronowa) ma znaczenie - sieci powinny lepiej wykorzystać gęste reprezentacje (embeddingi), a RF reprezentacje rzadkie/podstrukturalne (fingerprinty).
+
+> **Wynik dodatkowy - użyteczność MTL przy niedoborze danych:** w eksperymencie kontrolnym ("głód danych"), gdy dla zadania docelowego dostępnych było tylko **10%** zbioru hERG, MTL podniósł AUROC z **0.41 (STL) do 0.84 (MTL)** - najmocniejszy dowód, że MTL pomaga najbardziej tam, gdzie danych jest mało.
 
 ### Podejście - dwie fazy
 
@@ -175,11 +186,32 @@ ADMET-predictor/
 │   ├── metrics_NN_descriptors.txt
 │   └── metrics_NN_embeddings.txt
 │
-├── STL_RF/                             # Single-Task Learning, Random Forest (sklearn) — TODO
-│   └── (notebooki dla 3 reprezentacji + plik metryk)
+├── STL_RF/                             # Single-Task Learning, Random Forest (sklearn)
+│   ├── STL_fingerprints_RF.ipynb       # RF na ECFP4
+│   ├── STL_Descriptor_RF.ipynb         # RF na deskryptorach 2D
+│   ├── STL_embeddings_RF.ipynb         # RF na embeddingach MoLFormer
+│   ├── metrics.txt, metrics_ADMET_featurizer.txt
+│   └── metryki/                        # metryki per reprezentacja
 │
-├── MTL_ML/                             # Multi-Task Learning — TODO
-│   └── (notebooki MTL na 3 zestawach: absorpcja, eliminacja, kardiotoksyczność)
+├── MTL_ML/                             # Multi-Task Learning, Random Forest
+│   ├── MTL_fingerprints_*_RF.ipynb     # 3 zestawy: absorpcja / eliminacja / kardiotoksyczność
+│   ├── MTL_descriptors_*_RF.ipynb
+│   ├── MTL_embeddings_absorpcja_RF.ipynb
+│   └── metryki/                        # wyniki MTL dla RF
+│
+├── MTL_NN/                             # Multi-Task Learning, sieci neuronowe (PyTorch)
+│   ├── MTL_fingerprints_*.ipynb        # 3 reprezentacje × 3 zestawy + warianty
+│   ├── MTL_descriptors_*_NN.ipynb      #   (m.in. testy funkcji ważenia straty:
+│   ├── MTL_embeddings_*.ipynb          #    suma / uniform / uncertainty)
+│   ├── MTL_loss_weighting_methods.pdf  # opis metod ważenia straty
+│   └── metryki/                        # wyniki MTL dla sieci neuronowych
+│
+├── reports/                            # wygenerowane raporty PDF (porównania)
+│   ├── Raport_Porownawczy_STL_MTL7.pdf       # STL vs MTL (RF+desc, NN+emb)
+│   ├── Porownanie_Modeli_MTL_RF_vs_NN.pdf    # RF vs NN w trybie MTL
+│   ├── Raport_Wynikow_ADMET_STL.pdf          # wyniki bazowe STL
+│   ├── Raport_MTL_Znormalizowany_NRMSE9.pdf  # wpływ funkcji straty (NRMSE)
+│   └── ... (raporty RF i NN MTL)
 │
 └── results/                            # zbiorcze metryki wszystkich modeli
     ├── metrics_fingerprints.txt

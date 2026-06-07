@@ -1,0 +1,216 @@
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : Half Life + Clearance Hepatocyte
+========================================
+  RMSE     : 101.1292
+  MAE      : 26.5738
+  R²       : 0.2870
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : Half Life + Clearance Hepatocyte
+========================================
+  RMSE     : 46.7611
+  MAE      : 34.5948
+  R²       : 0.1402
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : Half life + Clearance Hepatocyte + CYP3A4 Inhibition
+========================================
+  RMSE     : 103.1371
+  MAE      : 27.0245
+  R²       : 0.2584
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : Half life + Clearance Hepatocyte + CYP3A4 Inhibition
+========================================
+  RMSE     : 47.1202
+  MAE      : 36.1743
+  R²       : 0.1269
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : Half life + Clearance Hepatocyte + CYP3A4 Inhibition
+========================================
+  Accuracy : 0.7218
+  F1       : 0.5487
+  AUROC    : 0.8296
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : Half life + Clearance Hepatocyte + CYP3A4 Inhibition + Vdss Lombardo
+========================================
+  RMSE     : 103.2801
+  MAE      : 27.4125
+  R²       : 0.2564
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : Half life + Clearance Hepatocyte + CYP3A4 Inhibition + Vdss Lombardo
+========================================
+  RMSE     : 47.0796
+  MAE      : 36.4629
+  R²       : 0.1284
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : Half life + Clearance Hepatocyte + CYP3A4 Inhibition + Vdss Lombardo
+========================================
+  RMSE     : 9.3292
+  MAE      : 2.9914
+  R²       : 0.8595
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : Half life + Clearance Hepatocyte + CYP3A4 Inhibition + Vdss Lombardo
+========================================
+  Accuracy : 0.7174
+  F1       : 0.5325
+  AUROC    : 0.8243
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : Clearance Hepatocyte + CYP3A4 Inhibition
+========================================
+  RMSE     : 47.3257
+  MAE      : 36.0080
+  R²       : 0.1193
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : Clearance Hepatocyte + CYP3A4 Inhibition
+========================================
+  Accuracy : 0.7324
+  F1       : 0.5807
+  AUROC    : 0.8358
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : Half Life (Obach) + CYP3A4 Inhibition (Veith)
+========================================
+  RMSE     : 102.9759
+  MAE      : 27.6032
+  R²       : 0.2608
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : Half Life (Obach) + CYP3A4 Inhibition (Veith)
+========================================
+  Accuracy : 0.6959
+  F1       : 0.4444
+  AUROC    : 0.8328
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  RMSE     : 103.6412
+  MAE      : 27.5290
+  R²       : 0.2512
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  RMSE     : 47.6597
+  MAE      : 36.7164
+  R²       : 0.1068
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  RMSE     : 13.3170
+  MAE      : 4.7640
+  R²       : -2.7858
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  Accuracy : 0.7101
+  F1       : 0.5106
+  AUROC    : 0.8297
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : Half Life (Obach) + Clearance Hepatocyte (AstraZeneca) + CYP3A4 Inhibition (Veith) + VDss (Lombardo) + AMES Mutagenicity
+========================================
+  Accuracy : 0.7442
+  F1       : 0.7500
+  AUROC    : 0.8330
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : Half Life + AMES
+========================================
+  RMSE     : 101.5170
+  MAE      : 27.1332
+  R²       : 0.2815
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : Half Life + AMES
+========================================
+  Accuracy : 0.7524
+  F1       : 0.7877
+  AUROC    : 0.8459
+========================================
+
+========================================
+Endpoint    : Half_Life_Obach
+Tasks       : Half life + Clearance Hepatocyte + CYP3A4 Inhibition + Vdss Lombardo
+========================================
+  RMSE     : 103.2801
+  MAE      : 27.4125
+  R²       : 0.2564
+========================================
+
+========================================
+Endpoint    : Clearance_Hepatocyte_AZ
+Tasks       : Half life + Clearance Hepatocyte + CYP3A4 Inhibition + Vdss Lombardo
+========================================
+  RMSE     : 47.0796
+  MAE      : 36.4629
+  R²       : 0.1284
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : Half life + Clearance Hepatocyte + CYP3A4 Inhibition + Vdss Lombardo
+========================================
+  RMSE     : 12.8043
+  MAE      : 4.7445
+  R²       : -2.4999
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : Half life + Clearance Hepatocyte + CYP3A4 Inhibition + Vdss Lombardo
+========================================
+  Accuracy : 0.7174
+  F1       : 0.5325
+  AUROC    : 0.8243
+========================================

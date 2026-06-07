@@ -1,0 +1,660 @@
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'hERG']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.7812
+  MAE      : 0.6235
+  R²       : 0.5869
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Lipophilicity_AZ', 'hERG']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.8550
+  F1       : 0.9055
+  AUROC    : 0.8673
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'hERG']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.8052
+  MAE      : 0.6395
+  R²       : 0.5612
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Lipophilicity_AZ', 'hERG']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.8473
+  F1       : 0.8990
+  AUROC    : 0.8686
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'hERG']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.7809
+  MAE      : 0.6182
+  R²       : 0.5873
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Lipophilicity_AZ', 'hERG']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.8702
+  F1       : 0.9154
+  AUROC    : 0.8544
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'hERG']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.7426
+  MAE      : 0.5845
+  R²       : 0.6268
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'hERG']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 1.2371
+  MAE      : 0.9163
+  R²       : 0.7180
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'hERG']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.8702
+  F1       : 0.9146
+  AUROC    : 0.8915
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'hERG']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.7418
+  MAE      : 0.5810
+  R²       : 0.6276
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'hERG']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 1.1762
+  MAE      : 0.8729
+  R²       : 0.7451
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'hERG']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.8550
+  F1       : 0.9045
+  AUROC    : 0.8643
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'hERG']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.7609
+  MAE      : 0.5998
+  R²       : 0.6082
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'hERG']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 1.1768
+  MAE      : 0.8686
+  R²       : 0.7448
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'hERG']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.8473
+  F1       : 0.8990
+  AUROC    : 0.8720
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.7457
+  MAE      : 0.5849
+  R²       : 0.6237
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 1.2394
+  MAE      : 0.9312
+  R²       : 0.7169
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 12.8855
+  MAE      : 4.6156
+  R²       : -2.5444
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.8702
+  F1       : 0.9146
+  AUROC    : 0.8881
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.7807
+  MAE      : 0.6171
+  R²       : 0.5875
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 1.2359
+  MAE      : 0.9213
+  R²       : 0.7185
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 10.4647
+  MAE      : 4.7302
+  R²       : -1.3377
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.8550
+  F1       : 0.9055
+  AUROC    : 0.8908
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.7451
+  MAE      : 0.5866
+  R²       : 0.6242
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 1.1524
+  MAE      : 0.8459
+  R²       : 0.7553
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 10.6781
+  MAE      : 4.8076
+  R²       : -1.4341
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.8626
+  F1       : 0.9100
+  AUROC    : 0.8639
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['VDss_Lombardo', 'hERG']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 8.4097
+  MAE      : 5.3072
+  R²       : -0.5097
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['VDss_Lombardo', 'hERG']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.8473
+  F1       : 0.9010
+  AUROC    : 0.8677
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['VDss_Lombardo', 'hERG']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 10.0231
+  MAE      : 4.6350
+  R²       : -1.1446
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['VDss_Lombardo', 'hERG']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.8626
+  F1       : 0.9100
+  AUROC    : 0.8785
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['VDss_Lombardo', 'hERG']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 8.2998
+  MAE      : 5.4410
+  R²       : -0.4705
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['VDss_Lombardo', 'hERG']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.8397
+  F1       : 0.8945
+  AUROC    : 0.8772
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Solubility_AqSolDB', 'hERG']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 1.2621
+  MAE      : 0.9345
+  R²       : 0.7065
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Solubility_AqSolDB', 'hERG']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.8550
+  F1       : 0.9055
+  AUROC    : 0.8902
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Solubility_AqSolDB', 'hERG']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 1.2346
+  MAE      : 0.9106
+  R²       : 0.7191
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Solubility_AqSolDB', 'hERG']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.8550
+  F1       : 0.9045
+  AUROC    : 0.8915
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Solubility_AqSolDB', 'hERG']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 1.1275
+  MAE      : 0.8341
+  R²       : 0.7657
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Solubility_AqSolDB', 'hERG']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.8550
+  F1       : 0.9055
+  AUROC    : 0.8763
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Solubility_AqSolDB', 'VDss_Lombardo']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 1.2553
+  MAE      : 0.9533
+  R²       : 0.7096
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Solubility_AqSolDB', 'VDss_Lombardo']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 9.2877
+  MAE      : 4.3526
+  R²       : -0.8414
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Solubility_AqSolDB', 'VDss_Lombardo']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 1.2659
+  MAE      : 0.9418
+  R²       : 0.7047
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Solubility_AqSolDB', 'VDss_Lombardo']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 12.1079
+  MAE      : 4.9487
+  R²       : -2.1295
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Solubility_AqSolDB', 'VDss_Lombardo']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 1.2247
+  MAE      : 0.9121
+  R²       : 0.7236
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Solubility_AqSolDB', 'VDss_Lombardo']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 8.6850
+  MAE      : 4.3575
+  R²       : -0.6102
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['hERG', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.8550
+  F1       : 0.9045
+  AUROC    : 0.8643
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['hERG', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.7827
+  F1       : 0.8211
+  AUROC    : 0.8815
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['hERG', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.8473
+  F1       : 0.9000
+  AUROC    : 0.8707
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['hERG', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.7724
+  F1       : 0.7713
+  AUROC    : 0.8775
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['hERG', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.8550
+  F1       : 0.9055
+  AUROC    : 0.8772
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['hERG', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.8054
+  F1       : 0.8269
+  AUROC    : 0.8820
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.7470
+  MAE      : 0.5852
+  R²       : 0.6223
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 1.2127
+  MAE      : 0.9046
+  R²       : 0.7290
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 10.3041
+  MAE      : 4.7386
+  R²       : -1.2665
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.8550
+  F1       : 0.9045
+  AUROC    : 0.9007
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.7868
+  F1       : 0.8100
+  AUROC    : 0.8588
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.7287
+  MAE      : 0.5697
+  R²       : 0.6406
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 1.2172
+  MAE      : 0.8995
+  R²       : 0.7270
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 13.6241
+  MAE      : 4.9585
+  R²       : -2.9624
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.8550
+  F1       : 0.9045
+  AUROC    : 0.8976
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.7744
+  F1       : 0.7958
+  AUROC    : 0.8511
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.7393
+  MAE      : 0.5783
+  R²       : 0.6300
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 1.1646
+  MAE      : 0.8656
+  R²       : 0.7501
+========================================
+
+========================================
+Endpoint    : VDss_Lombardo
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 8.9301
+  MAE      : 5.1936
+  R²       : -0.7024
+========================================
+
+========================================
+Endpoint    : hERG
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.8550
+  F1       : 0.9045
+  AUROC    : 0.8581
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB', 'VDss_Lombardo', 'hERG', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.7916
+  F1       : 0.8079
+  AUROC    : 0.8666
+========================================

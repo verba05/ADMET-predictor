@@ -1,0 +1,690 @@
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.4822
+  MAE      : 0.3880
+  R²       : 0.6339
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.7261
+  MAE      : 0.5603
+  R²       : 0.6432
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.4990
+  MAE      : 0.3843
+  R²       : 0.6080
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.7349
+  MAE      : 0.5616
+  R²       : 0.6344
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.4829
+  MAE      : 0.3796
+  R²       : 0.6329
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.7175
+  MAE      : 0.5629
+  R²       : 0.6515
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.4716
+  MAE      : 0.3711
+  R²       : 0.6499
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.7137
+  MAE      : 0.5569
+  R²       : 0.6553
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 1.1622
+  MAE      : 0.8545
+  R²       : 0.7511
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.4720
+  MAE      : 0.3798
+  R²       : 0.6494
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.7098
+  MAE      : 0.5463
+  R²       : 0.6590
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 1.1510
+  MAE      : 0.8466
+  R²       : 0.7559
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.4983
+  MAE      : 0.3923
+  R²       : 0.6091
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.7355
+  MAE      : 0.5642
+  R²       : 0.6338
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 1.1820
+  MAE      : 0.8597
+  R²       : 0.7426
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.5052
+  MAE      : 0.3936
+  R²       : 0.5982
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.7081
+  MAE      : 0.5480
+  R²       : 0.6606
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 1.1235
+  MAE      : 0.8110
+  R²       : 0.7674
+========================================
+
+========================================
+Endpoint    : HIA_Hou
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.9741
+  F1       : 0.9846
+  AUROC    : 0.9957
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.4974
+  MAE      : 0.3890
+  R²       : 0.6106
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.7313
+  MAE      : 0.5634
+  R²       : 0.6381
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 1.1470
+  MAE      : 0.8417
+  R²       : 0.7576
+========================================
+
+========================================
+Endpoint    : HIA_Hou
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.9655
+  F1       : 0.9794
+  AUROC    : 0.9946
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.4826
+  MAE      : 0.3770
+  R²       : 0.6334
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.7165
+  MAE      : 0.5553
+  R²       : 0.6525
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 1.1369
+  MAE      : 0.8359
+  R²       : 0.7618
+========================================
+
+========================================
+Endpoint    : HIA_Hou
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.9569
+  F1       : 0.9741
+  AUROC    : 0.9946
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'HIA_Hou']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.4851
+  MAE      : 0.3789
+  R²       : 0.6296
+========================================
+
+========================================
+Endpoint    : HIA_Hou
+Tasks       : ['Caco2_Wang', 'HIA_Hou']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.9569
+  F1       : 0.9741
+  AUROC    : 0.9946
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'HIA_Hou']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.4690
+  MAE      : 0.3707
+  R²       : 0.6538
+========================================
+
+========================================
+Endpoint    : HIA_Hou
+Tasks       : ['Caco2_Wang', 'HIA_Hou']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.9569
+  F1       : 0.9741
+  AUROC    : 0.9940
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'HIA_Hou']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.4802
+  MAE      : 0.3721
+  R²       : 0.6371
+========================================
+
+========================================
+Endpoint    : HIA_Hou
+Tasks       : ['Caco2_Wang', 'HIA_Hou']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.9569
+  F1       : 0.9741
+  AUROC    : 0.9946
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.7210
+  MAE      : 0.5535
+  R²       : 0.6482
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 1.2043
+  MAE      : 0.8755
+  R²       : 0.7327
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.7195
+  MAE      : 0.5538
+  R²       : 0.6496
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 1.1454
+  MAE      : 0.8368
+  R²       : 0.7583
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.7316
+  MAE      : 0.5551
+  R²       : 0.6377
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Lipophilicity_AZ', 'Solubility_AqSolDB']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 1.1382
+  MAE      : 0.8302
+  R²       : 0.7613
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.4874
+  MAE      : 0.3832
+  R²       : 0.6261
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Caco2_Wang', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.7950
+  F1       : 0.8087
+  AUROC    : 0.8755
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.4848
+  MAE      : 0.3850
+  R²       : 0.6300
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Caco2_Wang', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.7889
+  F1       : 0.8070
+  AUROC    : 0.8704
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.4807
+  MAE      : 0.3735
+  R²       : 0.6362
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Caco2_Wang', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.7944
+  F1       : 0.8132
+  AUROC    : 0.8701
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.4952
+  MAE      : 0.3932
+  R²       : 0.6140
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.7244
+  MAE      : 0.5610
+  R²       : 0.6449
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.7889
+  F1       : 0.8075
+  AUROC    : 0.8619
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.4948
+  MAE      : 0.3819
+  R²       : 0.6145
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.7239
+  MAE      : 0.5579
+  R²       : 0.6453
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.7854
+  F1       : 0.8028
+  AUROC    : 0.8610
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.4742
+  MAE      : 0.3717
+  R²       : 0.6460
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.7341
+  MAE      : 0.5684
+  R²       : 0.6352
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.8047
+  F1       : 0.8238
+  AUROC    : 0.8771
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.4932
+  MAE      : 0.3877
+  R²       : 0.6171
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.7190
+  MAE      : 0.5487
+  R²       : 0.6501
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 1.1245
+  MAE      : 0.8174
+  R²       : 0.7670
+========================================
+
+========================================
+Endpoint    : HIA_Hou
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.9569
+  F1       : 0.9744
+  AUROC    : 0.9929
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.7889
+  F1       : 0.8080
+  AUROC    : 0.8637
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.4871
+  MAE      : 0.3800
+  R²       : 0.6265
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.7197
+  MAE      : 0.5540
+  R²       : 0.6494
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 1.1549
+  MAE      : 0.8426
+  R²       : 0.7542
+========================================
+
+========================================
+Endpoint    : HIA_Hou
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.9655
+  F1       : 0.9796
+  AUROC    : 0.9935
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.7923
+  F1       : 0.8124
+  AUROC    : 0.8722
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.4939
+  MAE      : 0.3885
+  R²       : 0.6159
+========================================
+
+========================================
+Endpoint    : Lipophilicity_AZ
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.7143
+  MAE      : 0.5515
+  R²       : 0.6546
+========================================
+
+========================================
+Endpoint    : Solubility_AqSolDB
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 1.1211
+  MAE      : 0.8162
+  R²       : 0.7684
+========================================
+
+========================================
+Endpoint    : HIA_Hou
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.9741
+  F1       : 0.9845
+  AUROC    : 0.9908
+========================================
+
+========================================
+Endpoint    : AMES
+Tasks       : ['Caco2_Wang', 'Lipophilicity_AZ', 'Solubility_AqSolDB', 'HIA_Hou', 'AMES']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.8040
+  F1       : 0.8167
+  AUROC    : 0.8760
+========================================

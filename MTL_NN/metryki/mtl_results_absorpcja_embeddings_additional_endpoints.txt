@@ -1,0 +1,180 @@
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Pgp_Broccatelli']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.4583
+  MAE      : 0.3612
+  R²       : 0.6694
+========================================
+
+========================================
+Endpoint    : Pgp_Broccatelli
+Tasks       : ['Caco2_Wang', 'Pgp_Broccatelli']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.8443
+  F1       : 0.8417
+  AUROC    : 0.9001
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Pgp_Broccatelli']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.4638
+  MAE      : 0.3468
+  R²       : 0.6614
+========================================
+
+========================================
+Endpoint    : Pgp_Broccatelli
+Tasks       : ['Caco2_Wang', 'Pgp_Broccatelli']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.8279
+  F1       : 0.8250
+  AUROC    : 0.9038
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'Pgp_Broccatelli']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.4616
+  MAE      : 0.3616
+  R²       : 0.6646
+========================================
+
+========================================
+Endpoint    : Pgp_Broccatelli
+Tasks       : ['Caco2_Wang', 'Pgp_Broccatelli']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.8361
+  F1       : 0.8413
+  AUROC    : 0.9087
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'CYP3A4_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.4616
+  MAE      : 0.3600
+  R²       : 0.6646
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Caco2_Wang', 'CYP3A4_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.7778
+  F1       : 0.7279
+  AUROC    : 0.8608
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'CYP3A4_Veith']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.4780
+  MAE      : 0.3746
+  R²       : 0.6403
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Caco2_Wang', 'CYP3A4_Veith']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.7826
+  F1       : 0.7268
+  AUROC    : 0.8656
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'CYP3A4_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.4819
+  MAE      : 0.3761
+  R²       : 0.6345
+========================================
+
+========================================
+Endpoint    : CYP3A4_Veith
+Tasks       : ['Caco2_Wang', 'CYP3A4_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.7908
+  F1       : 0.7296
+  AUROC    : 0.8763
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'CYP2D6_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  RMSE     : 0.4885
+  MAE      : 0.3871
+  R²       : 0.6243
+========================================
+
+========================================
+Endpoint    : CYP2D6_Veith
+Tasks       : ['Caco2_Wang', 'CYP2D6_Veith']
+Loss Weighting: Weighted Loss Sum
+========================================
+  Accuracy : 0.8538
+  F1       : 0.4987
+  AUROC    : 0.8190
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'CYP2D6_Veith']
+Loss Weighting: Uniform Average
+========================================
+  RMSE     : 0.4795
+  MAE      : 0.3695
+  R²       : 0.6381
+========================================
+
+========================================
+Endpoint    : CYP2D6_Veith
+Tasks       : ['Caco2_Wang', 'CYP2D6_Veith']
+Loss Weighting: Uniform Average
+========================================
+  Accuracy : 0.8534
+  F1       : 0.4804
+  AUROC    : 0.8062
+========================================
+
+========================================
+Endpoint    : Caco2_Wang
+Tasks       : ['Caco2_Wang', 'CYP2D6_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  RMSE     : 0.4893
+  MAE      : 0.3890
+  R²       : 0.6230
+========================================
+
+========================================
+Endpoint    : CYP2D6_Veith
+Tasks       : ['Caco2_Wang', 'CYP2D6_Veith']
+Loss Weighting: Uncertainty Weighting
+========================================
+  Accuracy : 0.8595
+  F1       : 0.5226
+  AUROC    : 0.8419
+========================================

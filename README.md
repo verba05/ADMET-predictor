@@ -63,23 +63,10 @@ Lista 10 endpointów dobranych tak, aby reprezentowały zróżnicowane zadania (
 | **2 - Eliminacja** | Half Life, Clearance Hepatocyte, CYP3A4 Inhibition, VDss | AMES |
 | **3 - Kardiotoksyczność** | hERG, Lipophilicity, Solubility, VDss | AMES |
 
-W każdym zestawie świadomie dodaliśmy **AMES** jako endpoint biologicznie niepowiązany.
-
 ## Tech stack
-
-Stos technologiczny pogrupowany według warstw, zgodnie ze schematem projektowym:
-
-| Warstwa | Narzędzia |
-|---|---|
-| **Środowisko** | Python 3.12, Jupyter / Google Colab (GPU T4) |
-| **Cheminformatyka** | [**RDKit**](https://www.rdkit.org/) - parsowanie SMILES, Morgan/ECFP fingerprints, deskryptory 2D, walidacja cząsteczek<br>[**PyTDC**](https://tdc.readthedocs.io/) — pobieranie zbiorów ADMET (`tdc.single_pred.ADME` / `Tox`) |
-| **Reprezentacje molekularne** | **ECFP4** - `AllChem.GetMorganFingerprintAsBitVect`, 1024 bity, radius 2<br>**Deskryptory 2D** - 10 cech z RDKit: MW, LogP, HBD, HBA, TPSA, RotatableBonds, AromaticRings, HeavyAtoms, MolMR, FractionCSP3<br>**MoLFormer** - embeddingi z pretrenowanego modelu `ibm/MoLFormer-XL-both-10pct` (HuggingFace Transformers) |
-| **Modelowanie - klasyczne** | [**scikit-learn**](https://scikit-learn.org/) - `RandomForestRegressor` / `RandomForestClassifier`, dobór hiperparametrów przez `RandomizedSearchCV` (n_estimators, max_depth, max_features, min_samples_split) |
-| **Modelowanie - sieci neuronowe** | [**PyTorch**](https://pytorch.org/) - własny `AdmetEncoder` (Linear + LayerNorm + ReLU + Dropout, opcjonalny residual) z trzema typami głowic: STL_Regressor, STL_Classifier, MTL_Hybrid (`nn.ModuleDict` na endpoint)<br>Trening: optymalizator Adam (lr 1e-3 / 5e-4), 100 epok, MSELoss / BCEWithLogitsLoss, `StandardScaler` na etykietach regresji |
-| **Modelowanie - embeddingi** | [**HuggingFace Transformers**](https://huggingface.co/docs/transformers) - załadowanie i inferencja MoLFormer |
-| **Analiza danych** | NumPy, Pandas, Matplotlib - manipulacja tabelami, wizualizacja rozkładów endpointów, wykresy diagnostyczne |
-| **Serializacja** | `pickle` - zapis splitów train/test do plików `.pkl`, gwarantuje **identyczne** podziały danych dla wszystkich modeli i porównywalność wyników |
-| **Metryki** | scikit-learn - `mean_squared_error`, `mean_absolute_error`, `r2_score`, `accuracy_score`, `f1_score`, `roc_auc_score` |
+Cheminformatyka: RDKit, TDC.
+Modelowanie: PyTorch, scikit-learn, HuggingFace Transformers.
+Analiza Danych: NumPy, Pandas, Matplotlib.
 
 ## Struktura repo
 
@@ -154,3 +141,8 @@ ADMET-predictor/
 4. **Uruchomienie** - każdy notebook iteruje po endpointach i dopisuje metryki do odpowiedniego pliku `metrics_*.txt`.
 
 ### Podsumowanie wyników
+Uczenie wielozadaniowe (MTL) nie gwarantuje automatycznej poprawy i w prostych konfiguracjach daje wyniki zbliżone do modeli jednozadaniowych (STL). Jednak przy odpowiednim połączeniu zadań powiązanych biologicznie, MTL poprawia skuteczność predykcji, szczególnie dla małych i trudnych zbiorów danych (np. Half-Life). Przykładowo, włączenie do zestawu powiązanych parametrów eliminacji pozwoliło obniżyć błąd (RMSE) dla predykcji okresu półtrwania aż o 11% w przypadku sieci neuronowych i o 6% dla algorytmu Random Forest. Podobny, bardzo wyraźny zysk zanotowano przy ocenie wchłaniania (połączenie HIA i Caco-2), gdzie jakość klasyfikacji (AUROC) wzrosła o 9,3%. Należy jednak unikać łączenia zbyt wielu zróżnicowanych zadań, co może wprowadzać szum informacyjny i pogarszać wyniki. Doskonale obrazuje to przypadek parametru hERG – dołożenie do jego predykcji aż trzech dodatkowych właściwości sprawiło, że ostateczny wynik spadł poniżej pułapu wyznaczonego przez bazowy model STL (z 0.869 do 0.864).
+
+Kluczowym czynnikiem decydującym o sukcesie jest również ścisłe dopasowanie reprezentacji molekularnej do wykorzystywanego algorytmu. Sieci neuronowe osiągają najwyższą skuteczność przy użyciu gęstych embeddingów, z kolei w przypadku algorytmu Random Forest w trybie MTL najlepiej sprawdzają się stabilne, niskowymiarowe deskryptory. Równie istotny jest dobór funkcji straty w sieciach neuronowych. Ponieważ poszczególne zadania drastycznie różnią się skalą (np. klasyfikacja vs regresja), zastosowanie adaptacyjnego ważenia strat (Uncertainty Weighting) pozwala modelowi automatycznie balansować te różnice.
+
+📌 Szczegółowe wyniki eksperymentów, tabele, wykresy oraz bardziej obszerna analiza wszystkich postawionych hipotez znajdują się w plikach PDF w folderze "reports" oraz w prezentacji podsumowującej projekt.

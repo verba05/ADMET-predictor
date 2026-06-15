@@ -1,8 +1,5 @@
 # ADMET-predictor
 
-> ⚠️ **Repozytorium w trakcie finalizacji (stan na 14.06.2026).** Porządkujemy jeszcze
-> notebooki i uzupełniamy dokumentację wyników. Prosimy
-> prowadzących o wstrzymanie się z oceną do finalnego commita — dziękujemy!
 
 Projekt realizowany w ramach kursu **„Uczenie maszynowe w projektowaniu leków" 2025/2026**.
 

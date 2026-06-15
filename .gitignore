@@ -1,0 +1,8 @@
+# Duże embeddingi CSV (generowane z MoLFormer)
+*.csv
+**/embeddings/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/

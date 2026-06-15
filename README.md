@@ -132,13 +132,13 @@ ADMET-predictor/
 
 ## Jak uruchomić
 
-1. **Środowisko** - notebooki przygotowane pod Google Colab (mount Google Drive, `accelerator: GPU T4`). Lokalnie wymagają:
-   ```bash
-   pip install torch rdkit pandas numpy scikit-learn pytdc fuzzywuzzy transformers
-   ```
-2. **Splity** - pliki `data_splits/*.pkl` należy umieścić w folderze wskazanym przez zmienną `data_folder` (w Colabie: `/content/drive/MyDrive/mldd_data/`). Gwarantuje to identyczny podział train/test dla każdego modelu i porównywalność wyników.
-3. **Embeddingi MoLFormer** - wymagają wcześniejszego wygenerowania pliku `{endpoint}_MoLFormer_embeddings.csv` (kolumny `Drug`, `Y`, `emb_0…emb_N`). Pipeline generujący znajduje się w katalogu roboczym (`STL_ML/embeddings_molformer.ipynb`).
+1. **Środowisko** - notebooki przygotowane pod Google Colab (mount Google Drive, `accelerator: GPU T4`). W notebookach już znajdują się komórki z komendami instalującymi wszystkie potrzebne biblioteki.
+2. **Splity oraz embeddingi** - folder `data_splits` razem z plikami w nim należy umieścić na Google Dysku. Po uruchomieniu kodu Colab poprosi o dostęp do dysku, na którym będą się znajdować te dane, aby móc wytrenować modele.
+3. **Embeddingi MoLFormer** - już znajdują się w folderze `data_splits`. W razie potrzeby ich wygenerowania, pipeline generujący znajduje się w pliku `embeddings_molformer.ipynb`.
 4. **Uruchomienie** - każdy notebook iteruje po endpointach i dopisuje metryki do odpowiedniego pliku `metrics_*.txt`.
+5. **Uwagi:**
+   1. W przypadku błędów w Colabie rekomendujemy zrobić Restart Session.
+   2. Trenowanie modeli Random Forest Single Task Learning może trwać długo ze względu na wykorzystanie sklearn, który wykorzystuje tylko CPU.
 
 ## Podsumowanie wyników
 Uczenie wielozadaniowe (MTL) nie gwarantuje automatycznej poprawy i w prostych konfiguracjach daje wyniki zbliżone do modeli jednozadaniowych (STL). Jednak przy odpowiednim połączeniu zadań powiązanych biologicznie, MTL poprawia skuteczność predykcji, szczególnie dla małych i trudnych zbiorów danych (np. Half-Life). Przykładowo, włączenie do zestawu powiązanych parametrów eliminacji pozwoliło obniżyć błąd (RMSE) dla predykcji okresu półtrwania aż o 11% w przypadku sieci neuronowych i o 6% dla algorytmu Random Forest. Podobny, bardzo wyraźny zysk zanotowano przy ocenie wchłaniania (połączenie HIA i Caco-2), gdzie jakość klasyfikacji (AUROC) wzrosła o 9,3%. Należy jednak unikać łączenia zbyt wielu zróżnicowanych zadań, co może wprowadzać szum informacyjny i pogarszać wyniki. Doskonale obrazuje to przypadek parametru hERG – dołożenie do jego predykcji aż trzech dodatkowych właściwości sprawiło, że ostateczny wynik spadł poniżej pułapu wyznaczonego przez bazowy model STL (z 0.869 do 0.864).

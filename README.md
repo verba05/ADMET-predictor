@@ -133,8 +133,8 @@ ADMET-predictor/
 ## Jak uruchomić
 
 1. **Środowisko** - notebooki przygotowane pod Google Colab (mount Google Drive, `accelerator: GPU T4`). W notebookach już znajdują się komórki z komendami instalującymi wszystkie potrzebne biblioteki.
-2. **Splity oraz embeddingi** - folder `data_splits` razem z plikami w nim należy umieścić na Google Dysku. Po uruchomieniu kodu Colab poprosi o dostęp do dysku, na którym będą się znajdować te dane, aby móc wytrenować modele.
-3. **Embeddingi MoLFormer** - już znajdują się w folderze `data_splits`. W razie potrzeby ich wygenerowania, pipeline generujący znajduje się w pliku `embeddings_molformer.ipynb`.
+2. **Splity** - folder `data_splits` razem z plikami w nim należy umieścić na Google Dysku. Po uruchomieniu kodu Colab poprosi o dostęp do dysku, na którym będą się znajdować te dane, aby móc wytrenować modele.
+3. **Embeddingi MoLFormer** - muszą zostać wygenerowane, ze względu na to, że GitHub nie zezwala na przesyłanie plików większych niż 25MB. Aby je wygenerować, należy stworzyć folder `data_splits` na Google Dysku, odpalić w Colabie skrypt `embeddings_molformer.ipynb`, a następnie nadać mu dostęp do Google Dysku. Embeddingi zostaną wygenerowane, a następnie umieszczone w `data_splits`.
 4. **Uruchomienie** - każdy notebook iteruje po endpointach i dopisuje metryki do odpowiedniego pliku `metrics_*.txt`.
 5. **Uwagi:**
    1. W przypadku błędów w Colabie rekomendujemy zrobić Restart Session.

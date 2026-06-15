@@ -74,61 +74,62 @@ Analiza Danych: NumPy, Pandas, Matplotlib.
 ADMET-predictor/
 ├── README.md
 ├── LICENSE
-├── predykcjaADMET_raport.docx.pdf      # raport końcowy z opisem metodologii i wyników
+├── .gitignore
+├── ADMET_final.pptx                          # prezentacja podsumowująca projekt
 │
-├── data_splits/                        # wspólne train/test splity (.pkl) — ten sam podział dla wszystkich modeli
-│   ├── AMES_split.pkl
-│   ├── CYP3A4_Veith_split.pkl
+├── data_splits/                              # wspólne train/test splity (.pkl) — ten sam podział dla wszystkich modeli
 │   ├── Caco2_Wang_split.pkl
-│   ├── Clearance_Hepatocyte_AZ_split.pkl
-│   ├── HIA_Hou_split.pkl
-│   ├── Half_Life_Obach_split.pkl
 │   ├── Lipophilicity_AstraZeneca_split.pkl
 │   ├── Solubility_AqSolDB_split.pkl
+│   ├── HIA_Hou_split.pkl
+│   ├── Half_Life_Obach_split.pkl
+│   ├── Clearance_Hepatocyte_AZ_split.pkl
+│   ├── CYP3A4_Veith_split.pkl
 │   ├── VDss_Lombardo_split.pkl
+│   ├── AMES_split.pkl
 │   └── hERG_split.pkl
 │
-├── STL_NN/                             # Single-Task Learning, sieci neuronowe (PyTorch)
-│   ├── STL_NN_fingerprints.ipynb       # NN na ECFP4 (1024 bit)
-│   ├── STL_NN_descriptors.ipynb        # NN na 10 deskryptorach 2D
-│   ├── STL_NN_embeddings.ipynb         # NN na embeddingach MoLFormer
-│   ├── metrics_NN_fingerprints.txt
-│   ├── metrics_NN_descriptors.txt
-│   └── metrics_NN_embeddings.txt
+├── STL_NN/                                    # Single-Task Learning — sieci neuronowe (PyTorch)
+│   ├── STL_NN_fingerprints.ipynb             # NN na ECFP4
+│   ├── STL_NN_descriptors.ipynb              # NN na 10 deskryptorach 2D
+│   ├── STL_NN_embeddings.ipynb               # NN na embeddingach MoLFormer
+│   └── embeddings_molformer.ipynb            # generowanie embeddingów MoLFormer do data_splits/
 │
-├── STL_RF/                             # Single-Task Learning, Random Forest (sklearn)
-│   ├── STL_fingerprints_RF.ipynb       # RF na ECFP4
-│   ├── STL_Descriptor_RF.ipynb         # RF na deskryptorach 2D
-│   ├── STL_embeddings_RF.ipynb         # RF na embeddingach MoLFormer
-│   ├── metrics.txt, metrics_ADMET_featurizer.txt
-│   └── metryki/                        # metryki per reprezentacja
+├── STL_RF/                                    # Single-Task Learning — Random Forest (scikit-learn)
+│   ├── STL_fingerprints_RF.ipynb             # RF na ECFP4
+│   ├── STL_Descriptor_RF.ipynb               # RF na deskryptorach 2D
+│   └── STL_embeddings_RF.ipynb               # RF na embeddingach MoLFormer
 │
-├── MTL_ML/                             # Multi-Task Learning, Random Forest
-│   ├── MTL_fingerprints_*_RF.ipynb     # 3 zestawy: absorpcja / eliminacja / kardiotoksyczność
-│   ├── MTL_descriptors_*_RF.ipynb
+├── MTL_ML/                                    # Multi-Task Learning — Random Forest (3 reprezentacje × 3 zestawy)
+│   ├── MTL_fingerprints_absorpcja_RF.ipynb
+│   ├── MTL_fingerprints_eliminacja_RF.ipynb
+│   ├── MTL_fingerprints_kardiotoksyczność_RF.ipynb
+│   ├── MTL_descriptors_absorpcja_RF.ipynb
+│   ├── MTL_descriptors_eliminacja_RF.ipynb
+│   ├── MTL_descriptors_kardiotoksyczność_RF.ipynb
 │   ├── MTL_embeddings_absorpcja_RF.ipynb
-│   └── metryki/                        # wyniki MTL dla RF
+│   ├── MTL_embeddings_eliminacja_RF.ipynb
+│   └── MTL_embeddings_kardiotoksycznosc_RF.ipynb
 │
-├── MTL_NN/                             # Multi-Task Learning, sieci neuronowe (PyTorch)
-│   ├── MTL_fingerprints_*.ipynb        # 3 reprezentacje × 3 zestawy + warianty
-│   ├── MTL_descriptors_*_NN.ipynb      #   (m.in. testy funkcji ważenia straty:
-│   ├── MTL_embeddings_*.ipynb          #    suma / uniform / uncertainty)
-│   ├── MTL_loss_weighting_methods.pdf  # opis metod ważenia straty
-│   └── metryki/                        # wyniki MTL dla sieci neuronowych
+├── MTL_NN/                                    # Multi-Task Learning — sieci neuronowe (3 reprezentacje × 3 zestawy)
+│   ├── MTL_fingerprints_absorpcja_NN.ipynb
+│   ├── MTL_fingerprints_eliminacja_NN.ipynb
+│   ├── MTL_fingerprints_kardiotoksycznosc.ipynb
+│   ├── MTL_descriptors_absorpcja_NN.ipynb
+│   ├── MTL_descriptors_eliminacja_NN.ipynb
+│   ├── MTL_descriptors_kardiotoksycznosc_NN.ipynb
+│   ├── MTL_embedings_absorpcja_NN.ipynb
+│   ├── MTL_embeddings_eliminacja_NN.ipynb
+│   └── MTL_embeddings_kardiotoksycznosc_NN.ipynb
 │
-├── reports/                            # wygenerowane raporty PDF (porównania)
-│   ├── Raport_Porownawczy_STL_MTL7.pdf       # STL vs MTL (RF+desc, NN+emb)
-│   ├── Porownanie_Modeli_MTL_RF_vs_NN.pdf    # RF vs NN w trybie MTL
-│   ├── Raport_Wynikow_ADMET_STL.pdf          # wyniki bazowe STL
-│   ├── Raport_MTL_Znormalizowany_NRMSE9.pdf  # wpływ funkcji straty (NRMSE)
-│   └── ... (raporty RF i NN MTL)
-│
-└── results/                            # zbiorcze metryki wszystkich modeli
-    ├── metrics_fingerprints.txt
-    ├── metrics_ADMET_featurizer.txt    # = deskryptory
-    ├── metrics_MoLFormer_embeddings.txt
-    └── visualisation_endpoints.png     # wizualizacja rozkładów / liczności endpointów
+└── reports/                                   # raporty PDF z wynikami i porównaniami
+    ├── Raport_Wynikow_ADMET_STL.pdf          # wyniki bazowe STL
+    ├── Raport_RF_MTL.pdf                      # wyniki MTL — Random Forest
+    └── Raport_NN_MTL.pdf                      # wyniki MTL — sieci neuronowe
 ```
+
+> **Zestawy tematyczne MTL:** `absorpcja`, `eliminacja`, `kardiotoksyczność`.
+> Endpointy są pogrupowane wg mechanizmów biologicznych (po 3 reprezentacje: fingerprinty ECFP4, deskryptory 2D, embeddingi MoLFormer).
 
 ## Jak uruchomić
 
